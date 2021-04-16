@@ -8,7 +8,7 @@
   <meta name="description" content="">
   <meta name="author" content="">
 
-  <title>SB Admin 2 - Dashboard</title>
+  <title>UserCRUD</title>
 
   <!-- Custom fonts for this template-->
   <link href="../theme/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
@@ -16,8 +16,6 @@
 
   <!-- Custom styles for this template-->
   <link href="../theme/css/sb-admin-2.min.css" rel="stylesheet">
-
-
 </head>
 
 <body id="page-top">
@@ -33,7 +31,7 @@
         <div class="sidebar-brand-icon rotate-n-15">
           <i class="fas fa-laugh-wink"></i>
         </div>
-        <div class="sidebar-brand-text mx-3">SB Admin <sup>2</sup></div>
+        <div class="sidebar-brand-text mx-3">UserCRUD</div>
       </a>
 
       <!-- Nav Item - Dashboard -->
@@ -52,8 +50,7 @@
       <div id="content">
 
         <!-- Topbar -->
-        <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
-        </nav>
+        <%@ include file="/header.jsp" %>
         <!-- End of Topbar -->
 
         <!-- Begin Page Content -->
@@ -61,20 +58,15 @@
 
           <!-- Page Heading -->
           <div class="d-sm-flex align-items-center justify-content-between mb-4">
-            <h1 class="h3 mb-0 text-gray-800">Dashboard</h1>
-            <a href="#" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i class="fas fa-download fa-sm text-white-50"></i> Generate Report</a>
+            <h1 class="h3 mb-0 text-gray-800">UserCRUD</h1>
+            <a href="/user/add" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i class="fas fa-download fa-sm text-white-50"></i> Dodaj użytkownika</a>
           </div>
+          <jsp:include page="${component}" flush="true" />
         </div>
       </div>
 
       <!-- Footer -->
-      <footer class="sticky-footer bg-white">
-        <div class="container my-auto">
-          <div class="copyright text-center my-auto">
-            <span>Copyright &copy; Your Website 2019</span>
-          </div>
-        </div>
-      </footer>
+      <%@ include file="/footer.jsp" %>
       <!-- End of Footer -->
 
     </div>
